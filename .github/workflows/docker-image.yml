@@ -46,9 +46,6 @@ jobs:
 
   build-front:
     name: SonarQube front
-    strategy:
-        matrix:
-            os: [ubuntu-latest] # You can add other OS here
     runs-on: ${{ matrix.os }}
 
     steps:
