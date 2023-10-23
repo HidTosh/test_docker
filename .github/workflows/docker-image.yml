@@ -22,15 +22,6 @@ jobs:
         working-directory: front
         run: npm ci
 
-      - name: build the project
-        working-directory: front
-        run: npm run build
-
-      - name: Unit tests
-        working-directory: front
-        run: |
-          npm install -g @angular/cli
-          ng test --browsers ChromeHeadless --watch=false
       - name: Coverage tests
         working-directory: front
         run: |
