@@ -49,18 +49,15 @@ jobs:
     strategy:
         matrix:
             os: [ubuntu-latest] # You can add other OS here
-            node-version: [18]
     runs-on: ${{ matrix.os }}
 
     steps:
+      - name: Use Node.js ${{ matrix.node-version }}
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
-      - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        path: ~/.npm
+          node-version: ${{ matrix.node-version }}
+          path: ~/.npm
       
       - name: NPM clean install
         working-directory: front
