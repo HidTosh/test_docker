@@ -20,9 +20,10 @@ jobs:
       - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version-file: front/package-lock.json
-          path: ~/.npm
-          cache-dependency-path: front/package-lock.json
+          node-version-file: front/package.json
+          #path: ~/.npm
+          cache: "npm"
+          cache-dependency-path: front/package.json
 
       - uses: actions/checkout@v3
         with:
