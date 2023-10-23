@@ -13,14 +13,14 @@ jobs:
     strategy:
         matrix:
             os: [ubuntu-latest] # You can add other OS here
-            node-version: [16]
+            
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 18
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 18
           path: ~/.npm
 
       - uses: actions/checkout@v3
