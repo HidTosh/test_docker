@@ -18,6 +18,24 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: NPM clean install
+        working-directory: front
+        run: npm ci
+
+      - name: build the project
+        working-directory: front
+        run: npm run build
+
+      - name: Unit tests
+        working-directory: front
+        run: |
+          npm install -g @angular/cli
+          ng test --browsers ChromeHeadless --watch=false
+      - name: Coverage tests
+        working-directory: front
+        run: |
+          npm install -g @angular/cli
+          ng test --code-coverage --watch=false --browsers ChromeHeadless
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         with:
@@ -25,3 +43,15 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+
+
+
+      - name: Install dependencies
+        run: yarn
+      - name: Test and coverage
+        run: yarn jest --coverage
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets. SONARCLOUD_TOKEN }}
