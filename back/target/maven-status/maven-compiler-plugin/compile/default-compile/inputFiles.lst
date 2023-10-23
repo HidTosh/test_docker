@@ -1,0 +1,5 @@
+/home/hidtosh/workarea/git/OC-project/Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD/back/src/main/java/com/openclassrooms/bobapp/data/JsonReader.java
+/home/hidtosh/workarea/git/OC-project/Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD/back/src/main/java/com/openclassrooms/bobapp/model/Joke.java
+/home/hidtosh/workarea/git/OC-project/Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD/back/src/main/java/com/openclassrooms/bobapp/controller/JokeController.java
+/home/hidtosh/workarea/git/OC-project/Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD/back/src/main/java/com/openclassrooms/bobapp/BobappApplication.java
+/home/hidtosh/workarea/git/OC-project/Gerez-un-projet-collaboratif-en-int-grant-une-demarche-CI-CD/back/src/main/java/com/openclassrooms/bobapp/service/JokeService.java
